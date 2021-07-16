@@ -12,8 +12,7 @@ color2 = (0,0,255)
 
 for i in os.listdir(path):
     img = cv.imread(os.path.join(path,i))
-    #img = cv.resize(img,(1280,720))
-    #img = cv.resize(cv.imread('images/images\hard_hat_workers0.png').shape[:2])
+    img = cv.resize(img,(1280,720))
     height,width,_ = img.shape
     blob = cv.dnn.blobFromImage(img,1/255,(416,416),(0,0,0),swapRB=True)
 
